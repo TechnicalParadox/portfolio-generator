@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-generator",
+  "version": "1.0.0",
+  "description": "Learning to use Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechnicalParadox/portfolio-generator.git"
+  },
+  "author": "technicalparadox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechnicalParadox/portfolio-generator/issues"
+  },
+  "homepage": "https://github.com/TechnicalParadox/portfolio-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}

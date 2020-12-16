@@ -1,7 +1,3 @@
-const fs = require('fs');
-
-const profileDataArgs = process.argv.slice(2);
-
 // const printProfileData = profileDataArr => {
 //   // This...
 //   for (let i = 0; i < profileDataArr.length; i += 1) {
@@ -16,10 +12,12 @@ const profileDataArgs = process.argv.slice(2);
 //
 // printProfileData(profileDataArgs);
 
+const fs = require('fs');
 const generatePage = require('./src/page-template.js');
 
-let [name, github] = profileDataArgs;
-fs.writeFile('index.html', generatePage(name, github), err =>
+let pageHTML = generatePage(name, github);
+
+fs.writeFile('index.html', pageHTML, err =>
 {
   if (err) throw err;
 
