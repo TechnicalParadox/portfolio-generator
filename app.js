@@ -82,13 +82,19 @@ Add a new project
   });
 };
 
-
 inquirer
   .prompt([
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name?'
+      message: 'What is your name? (Required)',
+      validate: a =>
+      {
+        if (a)
+          return true;
+        else
+          return "Please enter your name!";
+      }
     },
     {
       type: 'input',
