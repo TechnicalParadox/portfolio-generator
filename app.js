@@ -28,10 +28,10 @@ const inquirer = require('inquirer');
 const promptProject = portfolioData =>
 {
   console.log(`
-=================
-Add a new project
-=================
-`);
+  =================
+  Add a new project
+  =================
+  `);
   if (!portfolioData.projects)
     portfolioData.projects = [];
 
