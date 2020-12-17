@@ -40,12 +40,14 @@ Add a new project
       {
         type: 'input',
         name: 'name',
-        message: 'What is the name of your project?'
+        message: 'What is the name of your project?*',
+        validate: a => {return a ? true : "Please enter the name of your project!"}
       },
       {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project (Required)'
+        message: 'Provide a description of the project.*',
+        validate: a => {return a ? true : "Please enter a description of the project!"}
       },
       {
         type: 'checkbox',
@@ -56,7 +58,8 @@ Add a new project
       {
         type: 'input',
         name: 'link',
-        message: 'Enter the GitHub link to your project. (Required)'
+        message: 'Enter the GitHub link to your project.*',
+        validate: a => {return a ? true : "Please enter a link to the project!"}
       },
       {
         type: 'confirm',
@@ -87,29 +90,19 @@ inquirer
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name? (Required)',
-      validate: a =>
-      {
-        if (a)
-          return true;
-        else
-          return "Please enter your name!";
-      }
+      message: 'What is your name?*',
+      validate: a => {return a ? true : "Please enter your name!"}
     },
     {
       type: 'input',
       name: 'username',
-      message: 'What is your GitHub username?'
+      message: 'What is your GitHub username?*',
+      validate: a => {return a ? true : "Please enter your GitHub username!"}
     },
     {
       type: 'input',
       name: 'about',
       message: 'Provide some information about yourself:'
-    },
-    {
-      type: 'password',
-      name: 'pass',
-      message: 'What is your password?'
     }
   ])
   .then(promptProject)
