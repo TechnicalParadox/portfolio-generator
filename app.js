@@ -106,6 +106,5 @@ inquirer
       message: 'What is your password?'
     }
   ])
-  .then(answers => console.log(answers))
   .then(promptProject)
-  .then(projectAnswers => console.log(projectAnswers));
+  .then(portfolioData => console.log(portfolioData));
